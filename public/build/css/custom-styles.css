@@ -1,0 +1,87 @@
+/* Style the caret/arrow */
+.caret {
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+    display: inline-block;
+    margin-right: 6px;
+    margin-bottom: 3px;
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+    transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+    display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.nested-active {
+    display: block;
+}
+
+#scrollbar, .app-logo-container {
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.scrollbar-move-up {
+    transform: translateY(-21%);
+    transition-duration: 300ms;
+}
+
+.app-logo-container {
+    display: block;
+    text-align: center;
+    background: transparent;
+}
+.app-logo-container-collapsed {
+    /*transform: rotate(-90deg) scale(0.1) translateX(-50%) translateY(-100%);*/
+    /*transition-duration: 300ms;*/
+    visibility: hidden;
+}
+
+.app-logo-container .app-logo {
+    width: auto;
+    height: 95px;
+    opacity: .89;
+}
+
+.app-name>span {
+    color: white !important;
+    font-weight: bold;
+}
+.emblem-pic {
+    display: flex;
+    margin: 15px auto auto;
+    border: 1px solid #ffffff55;
+    height: 135px;
+    overflow: hidden;
+    border-radius: 10px;
+    max-width: 176px;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom,#abb9e8,#7c7f90,#405189)!important;
+    cursor: pointer;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.scale-up {
+    animation: scale-up ease 0s forwards;
+}
+
+td.t-1 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
